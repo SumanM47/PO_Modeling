@@ -372,6 +372,6 @@ NS_MCMC_new_fixp <- function(obj,parent_genus,offspring_genus,
     
   }
   if(nxt==0){keep.lambdaO <- NULL}
-  lst <- list("lambdaC"=keep.lambdaC,"mu0"=keep.mu0,"h"=keep.h,"ha"=ha,"hb"=hb,"lambdaO"=keep.lambdaO)
+  lst <- list("lambdaC"=keep.lambdaC,"mu0"=keep.mu0,"h"=keep.h,"lambdaO"=keep.lambdaO)
   return(lst)
 }
