@@ -163,11 +163,9 @@ subdata <- function(dat, genus){
 NS_MCMC_new_fixp <- function(obj,parent_genus,offspring_genus,
                              bdtype=1,
                              jitter=FALSE,
-                             h_init=0.05,
                              al=0.01,bl=0.01,
                              am=0.01,bm=0.01,
                              ao=0.01,bo=0.01,
-                             hap = 0,hbp = 0.20,
                              hclimp = 0.05,
                              B=100,
                              iters=20000,burn=10000,thin=1,step_int=30,
@@ -195,7 +193,7 @@ NS_MCMC_new_fixp <- function(obj,parent_genus,offspring_genus,
   ymax <- max(W$yrange)
   ymin <- min(W$yrange)
   maxd <- sqrt((xmax-xmin)^2 + (ymax-ymin)^2)
-  ha <- hap*maxd; hb <- hbp*maxd; hclim = hclimp*maxd;
+  hclim = hclimp*maxd;
   hsd <- hclim/qnorm(0.995)
   W_area <- area(W)
   
