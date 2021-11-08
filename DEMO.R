@@ -30,3 +30,7 @@ data.ppp <- multiprocppp(win=owin(),
 CPUtime <- system.time(M_out <- NS_MCMC_new_fixp(data.ppp,c("parent"),c("offspring1","offspring2"),bdtype=2,jitter=FALSE,B=100,hclimp=0.025,iters=100000,burn=80000,thin=2,store_res=FALSE,outfile=NULL))
 
 
+##UNIX or Mac
+dyn.unload(paste(getwd(),"/auxiliary/aux_c.so",sep=""))
+##Windows
+# dyn.unload(paste(getwd(),"/auxiliary/aux_c.dll",sep=""))
